@@ -46,27 +46,29 @@ export default function EventDisplay(props) {
     >
 
 
-      {events.map((event) => (
 <Box
 sx={{
   margin: 1,
-width: "200px",
+  width: "200px",
   alignItems: "center",
   justifyContent: "center",
   border: 3,
   borderRadius: 6,
   fontSize: "20px"
 }}>
-        <div className="event-display" key={event.id}>
-          <p> {event.name}</p>
-          <p>{event.place}</p>
-          <p> {event.date}</p>
-          <p>{event.time}</p>
-        </div>
+{events.map((event) => (
+        <div className="event-display" key={events.id}>
+
+  <p> {event.name}</p>
+  <p>{event.place}</p>
+  <p> {event.date}</p>
+  <p>{event.time}</p>
+  </div>
+  
+  ))}
       <Link to>RSVP</Link>
 
 </Box>
-      ))}
     
           </Box>
           </Container>
